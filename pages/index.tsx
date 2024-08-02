@@ -17,7 +17,7 @@ const api = async (user: string, method: string, body: any = {}, query: string =
     method,
     headers: {
       'Content-Type': 'application/json',
-      user
+      user: user,
     },
   };
   if (method !== 'GET') {
@@ -39,7 +39,7 @@ export default function Home() {
   const [edit, setEdit] = useState<number | null>(null);
   const [editedTask, setEditedTask] = useState<Task | null>(null);
   const [users, setUsers] = useState<UserRead[]>([]);
-  const [user, setUser] = useState<string>('');
+  const [user, setUser] = useState<string>('nhatnt');
 
   useEffect(() => {
     fetch('/api/users')

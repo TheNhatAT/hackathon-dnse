@@ -3,7 +3,7 @@ import type { NextApiRequest, NextApiResponse } from 'next'
 import { Permit } from 'permitio';
 
 const permit = new Permit({
-  pdp: "http://localhost:7766",
+  pdp: "https://cloudpdp.api.permit.io",
   token: process.env.PERMIT_SDK_TOKEN,
 });
 
